@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages de base
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,french]{babel}
+\usepackage[margin=2.5cm]{geometry}
+
+% Packages utiles
+\usepackage{graphicx} % Pour les images
+\usepackage{hyperref} % Liens cliquables
+\usepackage{amsmath}  % Mathématiques avancées
+\usepackage{enumitem} % Listes personnalisées
+\usepackage{titling}  % Permet de mofif le title
+
+% Premiere page
+\title{Python pour les incultes}
+\author{Bodin Jules}
+\date{\today}
+
+\renewcommand{\maketitlehookd}{%
+    \begin{center}
+    \includegraphics[keepaspectratio=true, width=0.8\textwidth]{../images/Logo_Python.jpg}
+    \end{center}
+}
+
+\begin{document}
+
+% Page de titre
+\maketitle
+
+% Page d'introduction avant la table des matieres
+% Expliques comment est design ce pdf
+
+\newpage
+
+Ce document a pour but d'enseigner les rudiments de Python. 
+
+\newpage
+
+\tableofcontents % Table des matières optionnelle
+
+\newpage
+
+\section{Introduction}
+Votre introduction ici.
+
+\end{document}

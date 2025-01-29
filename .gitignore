@@ -1,0 +1,5 @@
+# Transitions files for pdflatex compilation
+*.aux
+*.log
+*.out
+*.toc
