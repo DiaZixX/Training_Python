@@ -13,6 +13,11 @@
 \usepackage{enumitem} % Listes personnalisées
 \usepackage{titling}  % Permet de mofif le title
 \usepackage{float}    % Permet le positionnement des images
+\usepackage{listings} % Permet les blocs de code avec coloration syntaxique
+
+% Options
+\setcounter{tocdepth}{2} % Inclure les sous-sections
+\usepackage[none]{hyphenat} % Evite les cesures dans tous le document
 
 % Premiere page
 \title{Python pour les incultes}
@@ -95,6 +100,30 @@ Cool maintenant on sait qu'on va pas trop galérer à apprendre Python. Il est d
 
 \section{Les bases}
 
-On entre dans le vif du sujet, on va apprendre à coder en Python.
+On entre dans le vif du sujet, on va apprendre à coder en Python. 
+
+\subsection{Création et Exécution}
+
+Sous linux, pour créer un programme Python, il faut déjà créer le fichier qui va accueillir son code source. \newline
+Pour cela, il suffit de se mettre dans le répertoire souhaité (avec $cd$ c'est mieux et ça fait plus pro) et de créer un fichier avec une extension ".py".
+Voila la commande à entrer si on veut créer un programme nommé toto :
+
+\begin{lstlisting}[language=bash]
+touch toto.py
+\end{lstlisting}
+
+\noindent\textbf{Mini Exercice 2.1 : } Créer un programme tata.py dans un sous répertoire "Tutu/" \newline
+\textit{Indication : } Regarder la commande mkdir \newline
+Correction \hyperlink{AncreExo2.1}{ici}.
+
+\subsection{Hello world}
+
+Le programme le plus classique à faire en informatique est celui qui affiche hello world dans le terminal. 
+
+\newpage
+
+\section{Corrections}
+
+\hypertarget{AncreExo2.1}{Correction 2.1 : }
 
 \end{document}
