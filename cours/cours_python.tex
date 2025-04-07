@@ -14,10 +14,14 @@
 \usepackage{titling}  % Permet de mofif le title
 \usepackage{float}    % Permet le positionnement des images
 \usepackage{listings} % Permet les blocs de code avec coloration syntaxique
+\usepackage{xcolor}   % PErmet de mettre des paragraphes en couleur
 
 % Options
 \setcounter{tocdepth}{2} % Inclure les sous-sections
 \usepackage[none]{hyphenat} % Evite les cesures dans tous le document
+
+% Définir des couleurs customs
+\definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}  % Vert très foncé
 
 % Premiere page
 \title{Python pour les incultes}
@@ -112,18 +116,54 @@ Voila la commande à entrer si on veut créer un programme nommé toto :
 touch toto.py
 \end{lstlisting}
 
-\noindent\textbf{Mini Exercice 2.1 : } Créer un programme tata.py dans un sous répertoire "Tutu/" \newline
+{\color{darkgreen}
+\noindent\textbf{Mini Exercice 2.1 : } Créer un programme tata.py dans un sous répertoire "Tutu/". \newline
 \textit{Indication : } Regarder la commande mkdir \newline
-Correction \hyperlink{AncreExo2.1}{ici}.
+Correction \hyperlink{AncreExo2.1}{ici}.\newline
+}
+
+On sait maintenant créer le fichier qui va accueillir le code source de notre programme. Cependant, il ne faut pas oublier que python est un langage \underline{interprété}.
+Cela signifie qu'un fichier *.py n'est en fait qu'un fichier comprenant pleins de mots qui se suivent. Il faut que l'on indique à notre machine comment lire ce fichier.
+Pour cela il existe 2 méthodes : 
+\begin{itemize}
+    \item \underline{Le Shebang :} Cette méthode consiste à ajouter une en-tête à notre fichier. Il faut écrire sur la \textbf{première} ligne. 
+        \begin{lstlisting}[language=python]
+    #! /usr/bin/env python3
+        \end{lstlisting}
+        Qu'est ce que ce Shebang fait ? Il indique au système en quelle langue est écrit ce code source. Ici on lui indique que c'est en Python version 3.x. 
+        Deux choses à noter cependant : 
+        \begin{enumerate}
+            \item Cette méthode ne fonctionne que sur système Unix
+            \item On peut seulement écrire python au lieu de python3 sur le Shebang, cependant si plusieurs versions de python sont installées sur votre ordinateur, on en sait pas vers quoi pointera le Shebang.
+        \end{enumerate}
+        Avec cette méthode, il ne reste plus qu'à entrer le chemin vers le fichier dans le terminal pour l'exécuter.
+    \item \underline{A la main :} Cette méthode consiste à préciser directement dans le terminal l'interpréteur à utiliser. 
+        Ce qui donne dans le terminal :
+        \begin{lstlisting}[language=bash]
+    python3 /chemin/vers/le/fichier.py
+        \end{lstlisting}
+\end{itemize}
 
 \subsection{Hello world}
 
-Le programme le plus classique à faire en informatique est celui qui affiche hello world dans le terminal. 
+Le programme le plus classique à faire en informatique est celui qui affiche hello world dans le terminal. Il est grand temps que vous vous lanciez, mais je ne vais pas vous jetez dans la jungle sans rien.
+En Python, la fonction qui permet d'afficher quelque chose dans le terminal est la fonction {\color{blue} print(*objects)}. 
+Cette fonction est beaucoup plus complexe qu'elle ne le laisse paraitre, mais nous verrons ça plus tard. Tout ce que vous devez retenir c'est que print affiche ce que vous mettez dans le champ *objects.
+De plus, en Python, le texte se met entre guillemets.
+
+{\color{darkgreen}
+\noindent\textbf{Mini Exercice 2.2 : } Créer un programme hello.py qui affiche "Hello World !" dans le terminal. \newline
+\textit{Indication : } Sans compter le Shebang, ce programme tiens sur une seule ligne ! \newline
+Correction \hyperlink{AncreExo2.2}{ici}.
+}
+
+\subsection{Les Variables}
 
 \newpage
 
 \section{Corrections}
 
 \hypertarget{AncreExo2.1}{Correction 2.1 : }
+\hypertarget{AncreExo2.2}{Correction 2.2 : }
 
 \end{document}
