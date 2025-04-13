@@ -3,3 +3,7 @@
 *.log
 *.out
 *.toc
+*.listing
+
+# Config file for compilation
+_minted/
