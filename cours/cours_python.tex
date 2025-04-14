@@ -17,6 +17,7 @@
 \usepackage{xcolor}   % Permet de mettre des paragraphes en couleur
 \usepackage{amsfonts} % Permet d'avoir les ensembles mathématiques
 \usepackage{minted}   % Bloc de codes propres 
+\usepackage{stmaryrd} % Pour \llbracket et \rrbracket
 
 % Options
 \setcounter{tocdepth}{3}       % Inclure les sous-sections
@@ -280,15 +281,42 @@ Dire que ce sont des types est légèrement incorrect, ce sont des \underline{St
 \subsubsection{Les listes}
 
 Une liste Python est un regroupement de variable dans une seule variable. C'est étrange dit comme ça, mais vous allez vite comprendre. 
-Pour caractériser une liste en Python, il faut mettre entre [] les multiples valeurs que vous voulez en les séparant par des ",". Exemple : 
+Pour caractériser une liste en Python, il faut mettre entre [ ] les multiples valeurs que vous voulez en les séparant par des ",". Exemple : 
 \begin{pythoncode}
     lst_entier = [1, 5, 6, 7, 2]
 \end{pythoncode}
 
 {\color{red}
-\textbf{\underline{ATTENTION :}} Il est possible en Python de faire une liste d'éléments n'ayant pas le même type. Cependant, il est recommandé d'y avoir recours le moins possible, à part si vous savez ce que vous faites. 
+\textbf{\underline{ATTENTION :}} Il est possible en Python de faire une liste d'éléments n'ayant pas le même type. Cependant, il est recommandé d'y avoir recours le moins possible, à part si vous savez ce que vous faites. \newline
 }
 
+Désormais, à chaque fois que vous appellerez votre variable, vous pourrez accéder à toute la liste. Pour récupérer la valeur d'une "case" du tableau, il faut y accéder
+par son indice. L'indice est la position de l'élément dans la liste en lisant de gauche à droite à un petit détail près : \underline{on compte à partir de 0}. 
+Cela signifie que pour une liste comportant $n$ éléments, les indices sont compris dans l'intervalle $\llbracket0;n-1\rrbracket$. Il est aussi possible d'accéder à une 
+case du tableau en utilisant un indice négatif, indice devant être compris dans l'intervalle $\llbracket-n;-1\rrbracket$. L'utilisation des indices négatifs est très 
+situationnelle et se résumera souvent à l'utilisation de l'indice $-1$ (étant la dernière case du tableau). \newline
+Pour accéder à une valeur dans une liste, il faut écrire le nom de votre variable suivi de l'indice voulu entre [ ]. \newline
+Pour modifier une valeur à un certain indice, il faut écrire le nom de la variable suive de l'indice entre [ ] et faire une affectation. \newline 
+Voici un exemple : 
+\begin{pythoncode}
+    lst_entier = [1, 2, 3, 4, 5]
+    nom = "Turing" 
+
+    print(lst_entier[0]) # Affiche 1
+    print(lst_entier[-1]) # Affiche 5 
+    print(nom[2]) # Affiche r
+    print(nom[-4]) # Affiche r aussi
+
+    lst_entier[0] = 7
+
+    print(lst_entier[0]) # Affiche désormais 7
+\end{pythoncode}
+
+{\color{darkgreen}
+On remarque que les $String$ se comportent comme des tableaux de caractères (même si c'est plus que ça). Cependant, les $String$ sont des objets \underline{immuables}
+(immutable en Anglais) ce qui veut dire que vous ne pourrez pas en modifier le contenu après déclaration. \\
+Le meilleur moyen de vous en convaincre c'est d'essayer par vous-même, faites donc un petit programme qui essaye de modifier un caractère dans une $String$.
+}
 
 \subsection{Les conditions}
 
