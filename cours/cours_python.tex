@@ -318,6 +318,37 @@ On remarque que les $String$ se comportent comme des tableaux de caractères (m�
 Le meilleur moyen de vous en convaincre c'est d'essayer par vous-même, faites donc un petit programme qui essaye de modifier un caractère dans une $String$.
 }
 
+\subsubsection{Les dictionnaires}
+
+Les dictionnaires en Python c'est un regroupement de couple \textbf{clé} / \textbf{valeur}. Pour caractériser un dictionnaire en Python, il faut placer entre { } les
+différents couples en les séparant par des ",". Chaque couple s'écrit \textbf{<clé> : <valeur>}. Exemple :  
+\begin{pythoncode}
+    stock_fruits = { 
+        "banane" : 3,
+        "fraise" : 5,
+        "orange" : 1
+    }
+\end{pythoncode}
+Dans cet exemple, nous disposons désormais d'un dictionnaire décrivant notre stock de fruits. Dans ce stock, vous l'aurez compris, il y a 3 bananes, 5 fraises et 1 orange. 
+
+{\color{red}
+\textbf{\underline{ATTENTION :}} Comme pour les listes, sans surprise parce que c'est Python, il est possible de faire un dictionnaire de couples dont les valeurs ne sont
+pas du même type. Cependant, encore plus que pour les listes, il n'est vraiment pas recommandé d'y avoir recours à part si vous savez vraiment ce que vous faites. \\
+Encore pire, il est possible d'avoir des clés de types différents. Si vous faites ceci, vous vous lancez dans un abîme de galères dans lequel je ne vous accompagnerais pas.
+Vous risquez de passer un sale moment de debugging ou d'avoir un code dégueu au choix ... \newline
+}
+
+Là, si vous avez un peu suivi, vous vous posez sûrement la question suivante : Oui mais cher guide suprême, si je choisis des clés de types $int$, c'est quoi la différence
+avec une listes ? \\
+Ce à quoi je vous répondrais, aucune à un détail près : on l'a vu, une liste de taille $n$ aura des indices \underline{consécutifs} de $0$ à $n-1$, ce qui veut dire que si à
+un moment dans mon code, je veux une clé de valeur $2000000$, dans une liste j'aurai alors $2000000$ cases mémoires utilisées, alors que pour un dictionnaire, ce sera toujours
+qu'une seule. 
+
+{\color{cyan}
+Juste pour la culture, ce n'est pas à retenir à votre niveau de compréhension, la similarité entre les listes et les dictionnaires s'expliquent par le fait que ces deux SDD
+sont des implémentations du même Type Abstrait (qu'on notera TA) appelé \underline{Tableau Associatif}.
+}
+
 \subsection{Les conditions}
 
 \newpage
